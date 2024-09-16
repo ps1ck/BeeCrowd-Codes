@@ -1,2 +1,2 @@
 # BeeCrowd
-Todos os códigos feitos no beecrowd, todos já foram validados pela plataforma!
+Todos os códigos feitos no beecrowd em diversas linguagens, todos eles já foram validados pela plataforma!
