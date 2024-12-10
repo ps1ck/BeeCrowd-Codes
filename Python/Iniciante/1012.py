@@ -2,7 +2,7 @@ A,B,C = input().split()
 
 A = float(A) 
 B = float(B) 
-C = float (C)
+C = float(C)
 
 tri = float( (A * C) / 2 ) #Área do triângulo retângulo (A é a base e C é a altura)
 print(f'TRIANGULO: {tri:.3f}')
