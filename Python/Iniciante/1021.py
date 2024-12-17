@@ -1,3 +1,4 @@
+''' ESSE CÓDIGO TAVA DANDO ERRO NOS CENTAVOS.
 x = float(input())
 
 print('NOTAS:')
@@ -38,7 +39,7 @@ else:
     print('0 moeda(s) de R$ 0.25')
 
 if um >= 0.10:
-    zdez = (((((((((x%100) % 50) % 20) % 10) % 5) % 2) % 1) % 0.50) % 0.25) / 0.10
+    zdez = (((((((((x%100) % 50) % 20) % 10) % 5) % 2) % 1) % 0.50) % 0.25) / 0.10 
     print(f'{int(zdez)} moeda(s) de R$ 0.10')
 else:
     print('0 moeda(s) de R$ 0.10')
@@ -53,4 +54,25 @@ if um >= 0.01:
     zUM = (((((((((((x%100) % 50) % 20) % 10) % 5) % 2) % 1) % 0.50) % 0.25) % 0.10) % 0.05) / 0.01
     print(f'{int(zUM)} moeda(s) de R$ 0.01')
 else:
-    print('0 moeda(s) de R$ 0.01')
+    print('0 moeda(s) de R$ 0.01') 
+    '''
+
+#CODIGO MELHORADO PELO CHAT GPT, APRENDI FOR HOJE ENTÃO JÁ CONSEGUI ENTENDER E UTILIZEI ESSE:
+
+x = float(input())  # Entrada em reais
+valor = int(round(x * 100))  # Trabalhar em centavos para evitar erros de ponto flutuante
+
+print('NOTAS:')
+notas = [10000, 5000, 2000, 1000, 500, 200]  # Valores em centavos (lista)
+for nota in notas:
+    qtd_notas = valor // nota
+    print(f'{qtd_notas} nota(s) de R$ {nota / 100:.2f}')
+    valor %= nota
+
+print('MOEDAS:')
+moedas = [100, 50, 25, 10, 5, 1]  # Valores em centavos (lista)
+for moeda in moedas:
+    qtd_moedas = valor // moeda
+    print(f'{qtd_moedas} moeda(s) de R$ {moeda / 100:.2f}')
+    valor %= moeda
+ 
